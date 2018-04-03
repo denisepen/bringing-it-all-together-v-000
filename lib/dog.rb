@@ -3,7 +3,6 @@ class Dog
   attr_accessor :name, :breed, :id
 
   def  initialize(name:, breed:, id: nil)
-    # hash.each {|key, value| self.send(("#{key}="), value)}
     @id=id
     @name=name
     @breed=breed
