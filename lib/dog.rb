@@ -49,7 +49,7 @@ def self.drop_table
     dog_attr = {name: name, breed: breed}
     dog = Dog.new(dog_attr)
     dog_attr.each {|key, value| self.send("#{key}=", dog_attr[key])}
-      
+
     self.save
     self
   end
