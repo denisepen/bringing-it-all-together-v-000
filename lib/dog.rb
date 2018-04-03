@@ -71,7 +71,7 @@ end
     end.first
   end
 
-  def self.create(name:, breed:)
+  def self.create(dog_attr)
     dog_attr = {name: name, breed: breed}
     dog = Dog.new(dog_attr)
     # dog.save
