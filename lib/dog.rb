@@ -5,7 +5,7 @@ class Dog
   def  initialize(name:, breed:, id: nil)
     # hash.each {|key, value| self.send(("#{key}="), value)}
 
-    name:, breed:, id: nil
+    # name:, breed:, id: nil
     @id = id
     @name = name
     @breed = breed
@@ -72,7 +72,8 @@ end
   end
 
   def self.create(name:, breed:)
-    dog = Dog.new(name, breed)
+    dog_attr = { name: name, breed: breed}
+    dog = Dog.new(dog.attr)
     # dog.save
     # hash.each {|key, value| self.send(("#{key}="), value)}
      dog.send("#{name}=", name)
