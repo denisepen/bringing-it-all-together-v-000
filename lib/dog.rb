@@ -46,7 +46,7 @@ def self.drop_table
   end
 
   def self.create(dog_attr)
-    dog_attr.each {|key, value| self.send(("#{key}="), dog_attr[key])}
+    dog_attr.each {|key, value| self.send("#{key}=", dog_attr[key])}
       dog = Dog.new(dog_attr)
     self.save
     self
