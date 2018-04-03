@@ -95,9 +95,9 @@ end
       LIMIT 1
     SQL
 
-    result = DB[:conn].execute(sql, id)
+    result = DB[:conn].execute(sql, id)[0]
     dog = Dog.new( id: result[0], name: result[1], breed: result[2])
-    dog[0]
+    dog
   end
 
 end
