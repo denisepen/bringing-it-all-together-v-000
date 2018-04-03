@@ -72,7 +72,7 @@ end
     dog.save
     dog
   end
-  
+
   def self.find_by_name(id)
     sql = <<-SQL
       SELECT * FROM dogs
