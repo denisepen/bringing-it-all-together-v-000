@@ -5,7 +5,6 @@ class Dog
   def  initialize(name:, breed:, id: nil)
     # hash.each {|key, value| self.send(("#{key}="), value)}
 
-    # name:, breed:, id: nil
     @id=id
     @name=name
     @breed=breed
