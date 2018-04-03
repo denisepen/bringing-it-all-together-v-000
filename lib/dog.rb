@@ -70,7 +70,8 @@ end
 
   def self.create(name:, breed:)
     dog = Dog.new(name, breed)
-    dog.save
+    # dog.save
+    dog.send("save", dog)
     dog
   end
 
