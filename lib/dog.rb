@@ -55,7 +55,7 @@ def self.drop_table
     UPDATE dogs SET name = ?, breed = ? WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql, name, breed, id)
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 
   def self.new_from_db(row)
