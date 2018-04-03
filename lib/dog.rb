@@ -4,7 +4,6 @@ class Dog
 
   def  initialize(name:, breed:, id: nil)
     # hash.each {|key, value| self.send(("#{key}="), value)}
-
     @id=id
     @name=name
     @breed=breed
@@ -47,10 +46,10 @@ def self.drop_table
   def self.create(name:, breed:)
     dog_attr = {name: name, breed: breed}
     dog = Dog.new(dog_attr)
-    dog_attr.each {|key, value| self.send("#{key}=", dog_attr[key])}
+    dog_attr.each {|key, value| dog.send("#{key}=", dog_attr[key])}
 
-    self.save
-    self
+    dog.save
+    dog
   end
 
   def update
