@@ -73,7 +73,7 @@ end
 
   def self.create(name:, breed:)
     dog_attr = { name: name, breed: breed}
-    dog = Dog.new(dog.attr)
+    dog = Dog.new(dog_attr)
     # dog.save
     # hash.each {|key, value| self.send(("#{key}="), value)}
      dog.send("#{name}=", name)
