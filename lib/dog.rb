@@ -6,9 +6,9 @@ class Dog
     # hash.each {|key, value| self.send(("#{key}="), value)}
 
     # name:, breed:, id: nil
-    @id = id
-    @name = name
-    @breed = breed
+    @id=id
+    @name=name
+    @breed=breed
 end
 
 def self.create_table
