@@ -52,6 +52,18 @@ def self.drop_table
   def self.new_from_db(row)
    new_dog = self.new(row[0], row[1], row[2])
   new_dog
-end
+
+
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT * FROM dogs
+      WHERE name = ?
+      LIMIT 1
+    SQL
+
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
+  end
 
 end
