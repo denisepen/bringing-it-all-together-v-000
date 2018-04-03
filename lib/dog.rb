@@ -73,7 +73,7 @@ end
     # dog.save
     # hash.each {|key, value| self.send(("#{key}="), value)}
      dog.send("#{name:}", name)
-    dog.send("#{breed}", breed)
+    dog.send("#{breed:}", breed)
     dog.save
     dog
   end
