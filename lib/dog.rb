@@ -2,13 +2,13 @@ class Dog
 
   attr_accessor :name, :breed, :id
 
-  def  initialize(hash)
-    hash.each {|key, value| self.send(("#{key}="), value)}
+  def  initialize(name:, breed:, id: nil)
+    # hash.each {|key, value| self.send(("#{key}="), value)}
 
-    # name:, breed:, id: nil
-    # @id = id
-    # @name = name
-    # @breed = breed
+    name:, breed:, id: nil
+    @id = id
+    @name = name
+    @breed = breed
 end
 
 def self.create_table
