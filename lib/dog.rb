@@ -50,7 +50,7 @@ def self.drop_table
     dog
   end
 
-  def update(name, breed)
+  def update(name, breed, id)
     sql = <<-SQL
     UPDATE dogs SET name = ?, breed = ? WHERE id = ?
     SQL
