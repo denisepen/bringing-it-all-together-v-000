@@ -72,8 +72,8 @@ end
     dog = Dog.new(name, breed)
     # dog.save
     # hash.each {|key, value| self.send(("#{key}="), value)}
-     dog.send("#{name:}", name)
-    dog.send("#{breed:}", breed)
+     dog.send("#{name=}", name:)
+    dog.send("#{breed=}", breed:)
     dog.save
     dog
   end
