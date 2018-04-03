@@ -92,9 +92,10 @@ end
     sql = <<-SQL
       SELECT * FROM dogs
       WHERE id = ?
+      LIMIT 1
     SQL
 
-    result = DB[:conn].execute(sql, id)[0]
+    result = DB[:conn].execute(sql, id)
     dog = Dog.new(result[0], result[1], result[2])
     dog
   end
