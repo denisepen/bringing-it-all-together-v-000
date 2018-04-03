@@ -45,6 +45,16 @@ def self.drop_table
     end
   end
 
+  def self.create(dog_attr)
+    # dog_attr = {name: @name, breed: @breed}
+
+    # dog.save
+    dog_attr.each {|key, value| self.send(("#{key}="), dog_attr[k])}
+      dog = Dog.new(dog_attr)
+    self.save
+    self
+  end
+
   def update
     sql = <<-SQL
     UPDATE dogs SET name = ?, breed = ? WHERE id = ?
@@ -71,16 +81,7 @@ end
     end.first
   end
 
-  def self.create(dog_attr)
-    # dog_attr = {name: @name, breed: @breed}
-
-    # dog.save
-    dog_attr.each {|key, value| self.send(("#{key}="), value)}
-      dog = Dog.new(dog_attr)
-    self.save
-    self
-  end
-
+  
   def self.find_or_create_by(name:, breed:)
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
       if !dog.empty?
