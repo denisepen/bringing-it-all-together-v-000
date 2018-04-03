@@ -75,7 +75,7 @@ end
     # dog_attr = {name: @name, breed: @breed}
 
     # dog.save
-    dog_attr.each {|key, value| self.send(("#{key}="), value)}
+    dog_attr.each {|key, value| self.send(("#{key}"), value)}
       dog = Dog.new(dog_attr)
     self.save
     self
