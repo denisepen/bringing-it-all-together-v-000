@@ -68,12 +68,12 @@ end
     end.first
   end
 
-  def self.create(name:, breed:)
+  def self.create(hash)
     dog = Dog.new(name, breed)
     # dog.save
-    # hash.each {|key, value| self.send(("#{key}="), value
-    dog.send(name, name)
-    dog.send(breed, breed)
+    hash.each {|key, value| self.send(("#{key}="), value
+    # dog.send(name, name)
+    # dog.send(breed, breed)
     dog.save
     dog
   end
