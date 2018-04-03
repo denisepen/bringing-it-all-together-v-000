@@ -95,7 +95,7 @@ end
     SQL
 
     result = DB[:conn].execute(sql, id)[0]
-    Song.new(result[0], result[1], result[2])
+    Dog.new(result[0], result[1], result[2])
   end
 
 end
