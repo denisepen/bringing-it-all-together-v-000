@@ -67,6 +67,11 @@ end
     end.first
   end
 
+  def self.create(name, breed)
+    dog = Dog.new(name, breed)
+    dog.save
+    dog
+  end
   def self.find_by_name(id)
     sql = <<-SQL
       SELECT * FROM dogs
